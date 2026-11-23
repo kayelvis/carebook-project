@@ -5,7 +5,7 @@ import Doctor from '../models/doctorModel.js'
 //import { ApiError } from '../utils/ApiError.js';
 //import { sendEmail } from '../utils/sendEmail.js';
 
-consts signToken = (user) =>
+const signToken = (user) =>
   jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
     expiresIn: process.env.JWT_EXPIRES_IN || '7d',
   });
